@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <title>Exam</title>
 </head>
+
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <script src="./jquery/dist/jquery.js"></script>
-  <script src="main.js"></script>
+    <input type="text" id="receipe-input" placeholder="What's the your meal today?">
+    <button onclick="fetchReceipeInput()">Search</button>
+
+    <div id="receipes"></div>
+
+    <script id="template" type="text/x-handlebars-template">
+
+    {{#each receipe}}
+        <div>{{ this.title }}</div>
+        <div>{{ this.video }}</div>
+        <div>{{ this.img }}</div>
+    {{/each}}
+  
+  </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="main.js"></script>
+    <script src="Renderer.js"></script>
 </body>
+
 </html>
