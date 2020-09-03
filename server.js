@@ -23,7 +23,7 @@ const data = {}
 app.get('/recipes/:receipeID',
 
 urllib.request('https://recipes-goodness.herokuapp.com/recipes/oil', function (err, res) {
-            const data = JSON.parse(res.toString())
+            const data = JSON.parse(JSON.stringify(res))
             return data
         }),
 
