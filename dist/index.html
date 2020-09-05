@@ -15,11 +15,14 @@
     <script id="template" type="text/x-handlebars-template">
 
     {{#each receipes}}
+    <div class="polaroid">
     <div id={{inc @index}} class="single-receipe">
-        <div>{{this.title}}</div>
-        <!-- <div>{{this.ingredients}}</div> -->
-        <img src="{{this.thumbnail}}" alt="receipe.jpg">
-        <!-- <video src="{{this.href}}"></video> -->
+       <a href="{{this.href}}"><p>{{this.title}}</p></a>
+        <img src="{{this.thumbnail}}" alt="receipe.jpg" /*onclick="Alert()"*/><br>
+        {{#each this.ingredients}}
+            <p class="ingredients">Ingredients: <span>{{this}}</span></p>
+        {{/each}}
+    </div>
     </div>
         {{/each}}
   </script>

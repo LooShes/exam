@@ -1,3 +1,43 @@
+body {
+    margin:25px;
+}
+
+p {
+    display: inline;
+}
+
+img {
+    width: 70%;
+    border-radius: 10px;
+    margin: 10px;
+    align-content: inherit;
+}
+
+input {
+    width: 75%;
+    height: 30px;
+    font-size: 17px;
+    font-weight: inherit;
+}
+
+button {
+    width: 80px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: khaki;
+    margin-bottom: 5px;
+}
+
+div.polaroid {
+    border-radius: 10px;
+    background-color: rgb(219, 219, 219);
+  }
+  
+div.single-receipe {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
 #receipes {
     display: grid;
     grid-gap: 10px;
