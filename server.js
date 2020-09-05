@@ -15,6 +15,17 @@ app.listen(port, function () {
 app.get('/recipes/:cheese', function (request, response){
     urllib.request('https://recipes-goodness.herokuapp.com/recipes/cheese', function (err, data){
         let result = JSON.parse(data.toString())
+        //console.log(result)
+
+        result = result.results.map(item => {
+            return { 
+                ingredients: item.ingredients,
+                title: item.title,
+                thumbnail: item.thumbnail,
+                href: item.href
+                    }
+        })
         console.log(result)
+        response.send(result)
     })
 })
