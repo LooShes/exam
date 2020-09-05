@@ -2,15 +2,11 @@ body {
     margin:25px;
 }
 
-p {
-    display: inline;
-}
-
 img {
     width: 70%;
     border-radius: 10px;
     margin: 10px;
-    align-content: inherit;
+    align-content: center;
 }
 
 input {
@@ -34,9 +30,13 @@ div.polaroid {
   }
   
 div.single-receipe {
-    text-align: center;
+    /* text-align: center; */
     padding: 10px 20px;
   }
+
+div.ingredients {
+    display: inline;
+}  
 
 #receipes {
     display: grid;

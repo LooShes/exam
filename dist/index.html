@@ -18,9 +18,10 @@
     <div class="polaroid">
     <div id={{inc @index}} class="single-receipe">
        <a href="{{this.href}}"><p>{{this.title}}</p></a>
-        <img src="{{this.thumbnail}}" alt="receipe.jpg" /*onclick="Alert()"*/><br>
+        <img src="{{this.thumbnail}}" alt="receipe.jpg"><br>
+        <p>Ingredients:</p>
         {{#each this.ingredients}}
-            <p class="ingredients">Ingredients: <span>{{this}}</span></p>
+            <div class="ingredients"><span>{{this}}</span></div>
         {{/each}}
     </div>
     </div>

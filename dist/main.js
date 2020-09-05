@@ -1,6 +1,8 @@
-// $("img").on("click", on("click", function() {
-//     let findImg = $(".container").find("p").text()
-// }))
+
+$("img").on("click", function() {
+    let firstIngredient = $(this).closest("polaroid").nextSibling("p").find("span").text()
+    alert(firstIngredient)
+})
 
 const fetchIngredient = function () {
     let input = $("#input").val()
