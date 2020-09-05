@@ -2,6 +2,6 @@
 //     let input = $("#input").val()
 //     console.log(input)
 
-    // $.get(`/receipes/cheese`, function(team) {
-    //         console.log(team)
-    // }) 
+    $.get(`/recipes/:cheese`, function(team) {
+            console.log(team)
+    }) 

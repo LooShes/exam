@@ -12,10 +12,9 @@ app.listen(port, function () {
     console.log(`Running server on port ${port}`)
 })
 
-app.get('/recipes/:receipeID', function (request, response) {
-    urllib.request('https://recipes-goodness.herokuapp.com/recipes/cheese', function (err, data) {
+app.get('/recipes/:cheese', function (request, response){
+    urllib.request('https://recipes-goodness.herokuapp.com/recipes/cheese', function (err, data){
         let result = JSON.parse(data.toString())
-        console.log(result)    
-    
+        console.log(result)
     })
 })
